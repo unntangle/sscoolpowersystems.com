@@ -1,0 +1,113 @@
+/*
+ * SS Cool Power Systems — design tokens.
+ * REBRAND HERE: the only file to edit for colours, fonts, radii, shadows and type scale.
+ * Direction: warm, editorial, premium. Sand/taupe surfaces and near-black ink, with the LOGO BLUE as the
+ * accent (calls to action, highlights, icons, serif-italic headline accents).
+ * Tailwind reads these via `@theme inline` in src/app/globals.css. Prefix --ss- avoids clashes.
+ */
+:root {
+  /* ---------- Brand: warm sand → bronze → espresso ---------- */
+  --ss-brand-50: #faf7f2;
+  --ss-brand-100: #f3ece1;
+  --ss-brand-200: #e7dac6;
+  --ss-brand-300: #d6c1a3;
+  --ss-brand-400: #c1a37f;
+  --ss-brand-500: #a88a66;
+  --ss-brand-600: #8a6e50;
+  --ss-brand-700: #6f5840;
+  --ss-brand-800: #564434;
+  --ss-brand-900: #3d3127;
+  --ss-brand-950: #241d17;
+
+  /* ---------- Accent: SS Cool Power logo blue ---------- */
+  --ss-accent-50: #eef6fc;
+  --ss-accent-100: #d9eaf8;
+  --ss-accent-200: #b5d5f1;
+  --ss-accent-300: #84b9e6;
+  --ss-accent-400: #4f9ad8;
+  --ss-accent-500: #2b86c8; /* logo blue */
+  --ss-accent-600: #1a6fb0; /* buttons and links: white text 5.3:1 */
+  --ss-accent-700: #165d94;
+  --ss-accent-800: #154d78;
+  --ss-accent-900: #143f61;
+
+  /* ---------- Neutral (warm grey) ---------- */
+  --ss-neutral-50: #f7f6f4;
+  --ss-neutral-100: #efede9;
+  --ss-neutral-200: #e3e0da;
+  --ss-neutral-300: #cdc9c1;
+  --ss-neutral-400: #a29d94;
+  --ss-neutral-500: #77726a;
+  --ss-neutral-600: #5a564f;
+  --ss-neutral-700: #43403b;
+  --ss-neutral-800: #2b2926;
+  --ss-neutral-900: #1c1b19;
+  --ss-neutral-950: #121110;
+
+  /* ---------- Surfaces ---------- */
+  --ss-surface-sand: #c9b195;
+  --ss-surface-sand-deep: #ab8f70;
+  --ss-surface-cream: #f5efe6;
+  --ss-surface-stone: #ebe8e3;
+  --ss-surface-ink: #161514;
+
+  /* ---------- Status ---------- */
+  --ss-success-50: #eef7f0;
+  --ss-success-600: #1f7a3f;
+  --ss-success-700: #186231;
+  --ss-danger-50: #fbf0ee;
+  --ss-danger-600: #b9382a;
+  --ss-danger-700: #982c20;
+  --ss-warning-50: #fdf6e9;
+  --ss-warning-600: #a8640f;
+  --ss-warning-700: #86500c;
+  --ss-whatsapp-600: #0f7a3f;
+  --ss-whatsapp-700: #0b6332;
+
+  --ss-focus: var(--ss-accent-600);
+
+  /* ---------- Radii ---------- */
+  --ss-radius-xs: 4px;
+  --ss-radius-sm: 6px;
+  --ss-radius-md: 10px;
+  --ss-radius-lg: 14px;
+  --ss-radius-xl: 20px;
+  --ss-radius-2xl: 28px;
+  --ss-radius-banner: 24px;
+
+  /* ---------- Shadows (soft, low contrast) ---------- */
+  --ss-shadow-xs: 0 1px 2px rgb(18 17 16 / 0.05);
+  --ss-shadow-card: 0 1px 2px rgb(18 17 16 / 0.03), 0 12px 32px -18px rgb(18 17 16 / 0.18);
+  --ss-shadow-raised: 0 16px 40px -18px rgb(18 17 16 / 0.22);
+  --ss-shadow-overlay: 0 28px 72px -20px rgb(18 17 16 / 0.32);
+
+  /* ---------- Spacing ---------- */
+  --ss-gutter: clamp(1rem, 4vw, 3rem);
+  --ss-section-y: clamp(3.5rem, 8vw, 7.5rem);
+  --ss-stack-sm: 0.75rem;
+  --ss-stack-md: 1.5rem;
+  --ss-stack-lg: 2.5rem;
+
+  /* ---------- Type scale (light-weight, tight tracking headlines) ---------- */
+  --ss-text-display-3: clamp(1.875rem, 3.2vw, 2.75rem);
+  --ss-text-display-2: clamp(2.25rem, 4.6vw, 3.75rem);
+  --ss-text-display-1: clamp(2.75rem, 6.5vw, 5.5rem);
+  --ss-text-mega: clamp(4rem, 15vw, 13rem);
+
+  /* ---------- Containers ---------- */
+  --ss-container-text: 42rem;
+  --ss-container-narrow: 64rem;
+  --ss-container-site: 80rem;
+  --ss-container-wide: 100rem;
+
+  /* ---------- Motion ---------- */
+  --ss-ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ss-duration-fast: 150ms;
+  --ss-duration-base: 250ms;
+  --ss-duration-slow: 600ms;
+
+  /* ---------- Fonts (next/font sets --font-next-* in app/layout.tsx) ---------- */
+  --ss-font-sans: var(--font-next-sans), var(--font-next-tamil), ui-sans-serif, system-ui, sans-serif;
+  --ss-font-display: var(--font-next-display), var(--font-next-tamil), ui-sans-serif, system-ui, sans-serif;
+  --ss-font-serif: var(--font-next-serif), var(--font-next-tamil), ui-serif, Georgia, serif;
+}

@@ -1,0 +1,6 @@
+.next
+node_modules
+coverage
+pnpm-lock.yaml
+src/lib/shopify/__generated__
+ss-cool-power-systems-build-prompt.md

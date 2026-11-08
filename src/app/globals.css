@@ -1,0 +1,178 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "../styles/tokens.css";
+
+/* Map design tokens into Tailwind utilities. Edit values in tokens.css, not here. */
+@theme inline {
+  --color-brand-50: var(--ss-brand-50);
+  --color-brand-100: var(--ss-brand-100);
+  --color-brand-200: var(--ss-brand-200);
+  --color-brand-300: var(--ss-brand-300);
+  --color-brand-400: var(--ss-brand-400);
+  --color-brand-500: var(--ss-brand-500);
+  --color-brand-600: var(--ss-brand-600);
+  --color-brand-700: var(--ss-brand-700);
+  --color-brand-800: var(--ss-brand-800);
+  --color-brand-900: var(--ss-brand-900);
+  --color-brand-950: var(--ss-brand-950);
+
+  --color-accent-50: var(--ss-accent-50);
+  --color-accent-100: var(--ss-accent-100);
+  --color-accent-200: var(--ss-accent-200);
+  --color-accent-300: var(--ss-accent-300);
+  --color-accent-400: var(--ss-accent-400);
+  --color-accent-500: var(--ss-accent-500);
+  --color-accent-600: var(--ss-accent-600);
+  --color-accent-700: var(--ss-accent-700);
+  --color-accent-800: var(--ss-accent-800);
+  --color-accent-900: var(--ss-accent-900);
+
+  --color-neutral-50: var(--ss-neutral-50);
+  --color-neutral-100: var(--ss-neutral-100);
+  --color-neutral-200: var(--ss-neutral-200);
+  --color-neutral-300: var(--ss-neutral-300);
+  --color-neutral-400: var(--ss-neutral-400);
+  --color-neutral-500: var(--ss-neutral-500);
+  --color-neutral-600: var(--ss-neutral-600);
+  --color-neutral-700: var(--ss-neutral-700);
+  --color-neutral-800: var(--ss-neutral-800);
+  --color-neutral-900: var(--ss-neutral-900);
+  --color-neutral-950: var(--ss-neutral-950);
+
+  --color-sand: var(--ss-surface-sand);
+  --color-sand-deep: var(--ss-surface-sand-deep);
+  --color-cream: var(--ss-surface-cream);
+  --color-stone: var(--ss-surface-stone);
+  --color-ink: var(--ss-surface-ink);
+
+  --color-success-50: var(--ss-success-50);
+  --color-success-600: var(--ss-success-600);
+  --color-success-700: var(--ss-success-700);
+  --color-danger-50: var(--ss-danger-50);
+  --color-danger-600: var(--ss-danger-600);
+  --color-danger-700: var(--ss-danger-700);
+  --color-warning-50: var(--ss-warning-50);
+  --color-warning-600: var(--ss-warning-600);
+  --color-warning-700: var(--ss-warning-700);
+  --color-whatsapp-600: var(--ss-whatsapp-600);
+  --color-whatsapp-700: var(--ss-whatsapp-700);
+
+  --radius-xs: var(--ss-radius-xs);
+  --radius-sm: var(--ss-radius-sm);
+  --radius-md: var(--ss-radius-md);
+  --radius-lg: var(--ss-radius-lg);
+  --radius-xl: var(--ss-radius-xl);
+  --radius-2xl: var(--ss-radius-2xl);
+  --radius-banner: var(--ss-radius-banner);
+
+  --shadow-xs: var(--ss-shadow-xs);
+  --shadow-card: var(--ss-shadow-card);
+  --shadow-raised: var(--ss-shadow-raised);
+  --shadow-overlay: var(--ss-shadow-overlay);
+
+  --font-sans: var(--ss-font-sans);
+  --font-display: var(--ss-font-display);
+  --font-serif: var(--ss-font-serif);
+
+  --text-display-3: var(--ss-text-display-3);
+  --text-display-3--line-height: 1.1;
+  --text-display-3--letter-spacing: -0.03em;
+  --text-display-2: var(--ss-text-display-2);
+  --text-display-2--line-height: 1.05;
+  --text-display-2--letter-spacing: -0.035em;
+  --text-display-1: var(--ss-text-display-1);
+  --text-display-1--line-height: 1;
+  --text-display-1--letter-spacing: -0.04em;
+  --text-mega: var(--ss-text-mega);
+  --text-mega--line-height: 0.9;
+  --text-mega--letter-spacing: -0.05em;
+
+  --container-text: var(--ss-container-text);
+  --container-narrow: var(--ss-container-narrow);
+  --container-site: var(--ss-container-site);
+  --container-wide: var(--ss-container-wide);
+
+  --ease-out-soft: var(--ss-ease-out);
+}
+
+/* Page containers: max-width + responsive gutters. */
+@utility container-site {
+  width: 100%;
+  max-width: var(--ss-container-site);
+  margin-inline: auto;
+  padding-inline: var(--ss-gutter);
+}
+
+@utility container-wide {
+  width: 100%;
+  max-width: var(--ss-container-wide);
+  margin-inline: auto;
+  padding-inline: var(--ss-gutter);
+}
+
+@utility section-y {
+  padding-block: var(--ss-section-y);
+}
+
+/* Serif-italic accent inside headlines: <h2>Your everyday <em class="accent">made easier</em></h2> */
+@utility accent-serif {
+  font-family: var(--ss-font-serif);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+/* Hide scrollbars on horizontal rails while keeping them scrollable. */
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: #fff;
+    color: var(--ss-neutral-900);
+    font-family: var(--ss-font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--ss-font-display);
+    font-weight: 500;
+    text-wrap: balance;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--ss-focus);
+    outline-offset: 2px;
+  }
+
+  .bg-ink :focus-visible,
+  [data-theme="dark"] :focus-visible {
+    outline-color: #fff;
+  }
+
+  :lang(ta) {
+    line-height: 1.7;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

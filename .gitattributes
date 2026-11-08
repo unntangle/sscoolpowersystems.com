@@ -1,0 +1,7 @@
+# Keep LF line endings in the repo so Husky hooks and Prettier behave the same on Windows and CI.
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.webp binary
+*.avif binary
+*.woff2 binary

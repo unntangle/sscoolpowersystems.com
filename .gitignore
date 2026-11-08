@@ -1,0 +1,32 @@
+# deps
+node_modules/
+.pnpm-store/
+
+# next
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+
+# generated
+src/lib/shopify/__generated__/
+
+# tests
+coverage/
+playwright-report/
+test-results/
+
+# env
+.env
+.env*.local
+
+# os / editors
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# logs
+*.log
+.vercel
