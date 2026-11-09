@@ -17,8 +17,9 @@ Refrigerators, Televisions, Inverters. Defined once in `categories` in `src/conf
 ## Business
 Chennai-based authorised dealer. Brands: Panasonic, Mitsubishi Heavy Industries, Daikin, Mitsubishi Electric, Haier
 (`src/config/brands.ts`, logos in `public/images/brands/`). Logo: `public/images/sscool-logo.webp` (1200×255).
-Contact: +91 96011 11070 · info@sspowercool.com · 43, Ravi Colony Second Street, Ramapuram, Nazarethpuram,
-Gandhi Nagar, St. Thomas Mount, Chennai 600032 (`src/config/site.ts`). 7-day hassle-free returns.
+Favicon: `public/images/sscool-fav-icon.png`.
+Contact: +91 96011 11070 · info@sscoolpowersystems.com · 37, Ravi Colony Second Street, Nazarethpuram,
+Gandhi Nagar, St. Thomas Mount, Chennai, Tamil Nadu 600032 (`src/config/site.ts`). 7-day hassle-free returns.
 
 ## Business model
 - Each product has a `pricing_mode` metafield: `public` | `whatsapp_quote` | `rfq`, changeable without a deploy.
@@ -44,9 +45,15 @@ Shopify metaobjects for CMS content · Vercel · Sentry · GA4 + Meta CAPI · Vi
 ## Design
 Layout and interaction patterns inspired by ifbappliances.com, with our own brand, copy and imagery (never IFB's
 assets or text). Warm sand/cream surfaces and ink text, with the **logo blue** (`--ss-accent-*`, 600 = #1a6fb0) as
-the accent on CTAs, highlights, icons and serif-italic headline accents. Inter Tight headlines with Instrument
-Serif italic accents, rounded banners, dark footer. Star ratings stay gold. All tokens in `src/styles/tokens.css`.
+the accent on CTAs, highlights, icons and serif-italic headline accents. Buttons are flat (no shadows).
+The hero stays neutral (white text and glass button on the photo, no blue). Star ratings stay gold.
+Inter Tight headlines with Instrument Serif italic accents, rounded banners. All tokens in `src/styles/tokens.css`.
 Photos go in `public/images/` (see its README); missing photos render styled placeholder scenes.
+
+**Footer (agreed layout, `src/components/layout/footer.tsx` + `src/styles/footer.css`):** dark, no logo, no
+coloured lines. Row 1: link columns Products · Company · Support · Legal. Row 2 on the same 4-column grid:
+Visit our store (under Products) · Contact: phone + email (under Company) · newsletter right-aligned in the last
+two columns. Then the "stay cool" wordmark and a bottom bar (copyright, GSTIN, socials).
 
 ## Global UI
 1. Announcement bar (7-day returns) · utility bar: pincode, hotline, Support pill.
@@ -55,7 +62,7 @@ Photos go in `public/images/` (see its README); missing photos render styled pla
    Brands panel = authorised brand logos. Mobile: drawer with drill-down for Products and Brands.
 3. Homepage: hero · five category tiles with product counts · prompt search · brands row · spotlight ·
    lifestyle banners · best sellers · installations · editorial · brand banner · value props · reviews · get started.
-4. Search overlay, cart drawer, login modal (mobile OTP), dark footer, floating WhatsApp, sticky mobile Call bar.
+4. Search overlay, cart drawer, login modal (mobile OTP), footer, floating WhatsApp, sticky mobile Call bar.
 
 ## Engineering rules
 - Server Components by default; tagged Shopify cache + webhook revalidation.

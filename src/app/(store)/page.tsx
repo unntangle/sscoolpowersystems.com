@@ -8,12 +8,11 @@ import {
   GetStarted,
   LifestyleBanners,
   RealInstallations,
-  ReviewsWall,
   Spotlight,
-  TrustStrip,
   ValueProps,
 } from "@/components/home/home-sections";
 import { PromptSearch } from "@/components/home/prompt-search";
+import { ReviewsWall } from "@/components/home/reviews-wall";
 import { categories } from "@/config/navigation";
 import { bestSellerHandles, heroSlides, promptExamples } from "@/content/home";
 import { loc, type Locale } from "@/i18n";
@@ -75,9 +74,8 @@ export default async function HomePage() {
       <Everyday locale={locale} t={t} />
       <BrandBanner locale={locale} />
       <ValueProps locale={locale} t={t} />
-      <ReviewsWall locale={locale} t={t} />
+      <ReviewsWall locale={locale} />
       <GetStarted locale={locale} />
-      <TrustStrip t={t} />
     </>
   );
 }

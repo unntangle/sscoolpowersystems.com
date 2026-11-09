@@ -158,9 +158,9 @@ export const footerGroups: FooterGroup[] = [
   },
 ];
 
+/** Footer social links. PLACEHOLDER URLs: replace with the real profile links. */
 export const socialLinks = [
-  { label: "Facebook", href: "https://facebook.com/" }, // PLACEHOLDER: real page URLs
-  { label: "X", href: "https://x.com/" }, // PLACEHOLDER
-  { label: "YouTube", href: "https://youtube.com/" }, // PLACEHOLDER
-  { label: "LinkedIn", href: "https://linkedin.com/" }, // PLACEHOLDER
+  { label: "Instagram", href: "https://www.instagram.com/" },
+  { label: "Facebook", href: "https://www.facebook.com/" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/" },
 ] as const;

@@ -1,0 +1,33 @@
+/*
+ * Footer layout. Plain CSS (not utility classes) so the alignment never depends on class generation.
+ *
+ *   [ Products        | Company | Support | Legal ]
+ *   [ Visit our store | Contact |      Sale updates ]   <- newsletter right-aligned in the last two columns
+ */
+
+/* 2 columns on phones, 4 equal columns from tablet up. Gaps match the link groups (gap-x-8 / gap-y-10). */
+.footer-cols {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 2rem;
+  row-gap: 2.5rem;
+}
+
+@media (min-width: 48rem) {
+  .footer-cols {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* Newsletter: full width on phones; last two columns on tablet+, pushed to the right edge. */
+.footer-newsletter {
+  grid-column: span 2 / span 2;
+  width: 100%;
+  max-width: 28rem;
+}
+
+@media (min-width: 48rem) {
+  .footer-newsletter {
+    justify-self: end;
+  }
+}

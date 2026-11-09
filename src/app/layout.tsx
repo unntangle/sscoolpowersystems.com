@@ -25,7 +25,7 @@ const serif = Instrument_Serif({
   display: "swap",
 });
 
-// Tamil glyphs. Not preloaded: only fetched when Tamil text is on the page.
+// Tamil glyphs (kept for when the language switch is re-enabled). Not preloaded.
 const tamil = Noto_Sans_Tamil({
   subsets: ["tamil"],
   variable: "--font-next-tamil",
@@ -33,13 +33,21 @@ const tamil = Noto_Sans_Tamil({
   preload: false,
 });
 
+/** Favicon: public/images/sscool-fav-icon.png */
+const FAVICON = "/images/sscool-fav-icon.png";
+
 export const metadata: Metadata = {
   metadataBase: new URL(clientEnv.NEXT_PUBLIC_SITE_URL),
-  title: { default: `${site.name} | Home & Commercial Appliances, Chennai`, template: `%s | ${site.name}` },
+  title: { default: `${site.name} | Home Appliances, Chennai`, template: `%s | ${site.name}` },
   description:
-    "Authorised dealer for home and commercial appliances in Chennai. Best price on WhatsApp, installation included.",
+    "Authorised dealer for air conditioners, washing machines, refrigerators, TVs and inverters in Chennai. Best price on WhatsApp, installation included.",
   applicationName: site.name,
   formatDetection: { telephone: false },
+  icons: {
+    icon: [{ url: FAVICON, type: "image/png" }],
+    shortcut: [{ url: FAVICON, type: "image/png" }],
+    apple: [{ url: FAVICON, type: "image/png" }],
+  },
 };
 
 export const viewport: Viewport = {

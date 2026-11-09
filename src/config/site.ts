@@ -13,10 +13,10 @@ export const site = {
     sales: "+91 96011 11070", // Hotline
     support: "+91 96011 11070", // PLACEHOLDER: separate service line if any
   },
-  email: "info@sspowercool.com",
+  email: "info@sscoolpowersystems.com",
   address: {
-    line1: "43, Ravi Colony Second Street",
-    locality: "Ramapuram, Nazarethpuram, Gandhi Nagar, St. Thomas Mount",
+    line1: "37, Ravi Colony Second Street",
+    locality: "Nazarethpuram, Gandhi Nagar, St. Thomas Mount",
     city: "Chennai",
     state: "Tamil Nadu",
     pincode: "600032",

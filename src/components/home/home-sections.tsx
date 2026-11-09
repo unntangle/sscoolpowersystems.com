@@ -21,7 +21,6 @@ import { Button } from "@/components/ui/button";
 import { Carousel } from "@/components/ui/carousel";
 import { Rating } from "@/components/ui/rating";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { site } from "@/config/site";
 import {
   brandBanner,
   everyday,
@@ -34,7 +33,7 @@ import {
   stories,
   valueProps,
 } from "@/content/home";
-import { fmt, loc, type Dictionary, type Locale, type Localized } from "@/i18n";
+import { loc, type Dictionary, type Locale, type Localized } from "@/i18n";
 import { photo } from "@/lib/media";
 import type { ProductCard as ProductCardData } from "@/lib/shopify/mappers";
 import { cn } from "@/lib/utils";
@@ -435,7 +434,7 @@ export function ReviewsWall({ locale, t }: SectionProps) {
   );
 }
 
-// ---------- Get started ----------
+// ---------- Get started (last section before the footer: shorter bottom padding) ----------
 
 const quickIcons: Record<(typeof quickLinks)[number]["icon"], LucideIcon> = {
   passport: ReceiptText,
@@ -446,7 +445,7 @@ const quickIcons: Record<(typeof quickLinks)[number]["icon"], LucideIcon> = {
 
 export function GetStarted({ locale }: { locale: Locale }) {
   return (
-    <section className="container-wide section-y">
+    <section className="container-wide pt-[var(--ss-section-y)] pb-14 lg:pb-20">
       <Reveal>
         <div className="grid gap-12 lg:grid-cols-[1fr_1.4fr]">
           <SplitHeading lead={loc(getStarted.lead, locale)} accent={loc(getStarted.accent, locale)} />
@@ -475,19 +474,6 @@ export function GetStarted({ locale }: { locale: Locale }) {
           </div>
         </div>
       </Reveal>
-    </section>
-  );
-}
-
-// ---------- Trust strip ----------
-
-export function TrustStrip({ t }: { t: Dictionary }) {
-  return (
-    <section aria-label={t.home.trustTitle} className="container-wide pb-12">
-      <p className="text-[0.6875rem] text-neutral-500">
-        {t.footer.gst}: {site.gstin} · {fmt(t.home.since, { year: site.yearEstablished })} · {t.home.authorised} ·{" "}
-        {site.address.city}. Images are for illustration; check each product page for exact specifications.
-      </p>
     </section>
   );
 }

@@ -30,3 +30,9 @@ Thumbs.db
 # logs
 *.log
 .vercel
+
+# archives
+*.zip
+.*.zip
+
+
